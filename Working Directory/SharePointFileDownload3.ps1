@@ -4,7 +4,7 @@
 # 1. Input Your Variables
 $tenantId = "dad3dd6a-c498-432c-82ce-86bb88b3d294"
 $clientId = "05045b51-ce00-4802-8dfe-7ee60608a453"
-$clientSecret = "eX78Q~20WkUgxfhFe2wdbVqjIn_VxGULY_CI1cW5"
+$"<api key here>"
 $hostname = "choa365.sharepoint.com"  # Change this to your domain
 $siteRelativePath = "/teams/IST-ServiceManagement"  # Change this to your site-relative path
 $libraryName = "Documents"                # Typically "Documents", adjust if different
