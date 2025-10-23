@@ -1,0 +1,1 @@
+﻿Invoke-Command -ComputerName WDVP-0621-E0010.tfayd.com -ScriptBlock {Write-Output "Hello"}
