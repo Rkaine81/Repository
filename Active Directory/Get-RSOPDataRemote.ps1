@@ -1,0 +1,1 @@
+﻿Get-GPResultantSetOfPolicy -Computer SL4055515714857 -ReportType Html -Path "C:\CHOA\SL4055515714857_rsop.html" -User "160827"

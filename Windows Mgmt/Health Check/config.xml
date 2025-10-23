@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+<LocalFiles>$($env:ProgramData)\ConfigMgrClientHealth</LocalFiles> <!-- Path locally on computer for temporary files and local clienthealth.log if LocalLogFile="True" -->
+<Client Name="Version">5.00.9128.1007</Client>
+<Client Name="SiteCode">P01</Client>
+<Client Name="Domain">choa.org</Client>
+<Client Name="AutoUpgrade">True</Client>
+<Client Name="Share">\\choa-cifs\install\CM_P01\06_InProduction\SoftwareDistribution\Microsoft\ConfigurationManagerClient\_CurrentVersion</Client>
+<Client Name="CacheSize" Value="20480" DeleteOrphanedData="True" Enable="True" />
+<Client Name="Log" MaxLogSize="4096" MaxLogHistory="1" Enable="True" />
+<ClientInstallProperty>SMSSITECODE=P01</ClientInstallProperty>
+<ClientInstallProperty>DNSSUFFIX=choa.org</ClientInstallProperty>
+<ClientInstallProperty>SMSCACHESIZE=20480</ClientInstallProperty>
+<ClientInstallProperty>CCMLOGMAXSIZE=2621440</ClientInstallProperty>
+<ClientInstallProperty>/skipprereq:silverlight.exe</ClientInstallProperty>
+<ClientInstallProperty>SMSMP=DCVWP-SCCMAP01.choa.org </ClientInstallProperty>
+<ClientInstallProperty>FSP=DCVWP-SCCMAP01.choa.org</ClientInstallProperty>
+<ClientInstallProperty>CCMHTTPPORT=8080</ClientInstallProperty>
+<ClientInstallProperty>CCMHTTPSPORT=443</ClientInstallProperty>
+<ClientInstallProperty>RESETKEYINFORMATION=TRUE</ClientInstallProperty>
+<Log Name="File" Share="\\choa-cifs\install\WindowsLogs\ClientHealth" Level="Full" MaxLogHistory="8" LocalLogFile="True" Enable="True" /> <!-- Level: Full = everything. ClientInstall = only if installation of sccm agent fails.  -->
+<Log Name="SQL" Server="" Enable="False" />
+<Log Name="Time" Format="ClientLocal" /> <!-- Valid formats: ClientLocal / UTC  -->
+<Option Name="CcmSQLCELog" Enable="True" /> <!-- Optional check on the ConfigMgr agent if local database is corrupt -->
+<Option Name="BITSCheck" Fix="True" Enable="True" />
+<Option Name="DNSCheck" Fix="True" Enable="True" />
+<Option Name="Drivers" Enable="True" />
+<Option Name="Updates" Share="\\choa-cifs\install\CM_P01\06_InProduction\SoftwareDistribution\Microsoft\ClientHealthScriptUpdates" Fix="True" Enable="True" />
+<Option Name="PendingReboot" StartRebootApplication="False"  Enable="True" />
+<Option Name="RebootApplication" Application="" Enable="False" />
+<Option Name="MaxRebootDays" Days="7" Enable="False" />
+<Option Name="OSDiskFreeSpace">10</Option>
+<Option Name="HardwareInventory" Days="10" Fix="True" Enable="True" />
+<Option Name="SoftwareMetering" Fix="True" Enable="True" />
+<Option Name="WMI" Fix="True" Enable="True"/>
+<Option Name="RefreshComplianceState" Days="30" Enable="True"/>
+<Service Name="BITS" StartupType="Automatic (Delayed Start)" State="Running" Uptime="" />
+<Service Name="winmgmt" StartupType="Automatic" State="Running" Uptime="" />
+<Service Name="wuauserv" StartupType="Automatic (Delayed Start)" State="Running" Uptime="" />
+<Service Name="lanmanserver" StartupType="Automatic" State="Running" Uptime="" />
+<Service Name="RpcSs" StartupType="Automatic" State="Running" Uptime="" />
+<Service Name="W32Time" StartupType="Automatic" State="Running" Uptime="" />
+<Service Name="ccmexec" StartupType="Automatic" State="Running" Uptime="" />
+<Service Name="BrokerInfrastructure" StartupType="Automatic" State="Running" Uptime="" />
+<Service Name="PeerDistSvc" StartupType="Manual" State="Stopped" Uptime="" />
+<Service Name="smstsmgr" StartupType="Manual" State="Stopped" Uptime="" />
+<Service Name="CryptSvc" StartupType="Automatic" State="Running" Uptime="" />
+<Service Name="DcomLaunch" StartupType="Automatic" State="Running" Uptime="" />
+<Service Name="DoSvc" StartupType="Manual" State="Stopped" Uptime="" />
+<Service Name="DeviceInstall" StartupType="Manual" State="Stopped" Uptime="7" />
+<Service Name="DsmSvc" StartupType="Manual" State="Stopped" Uptime="" />
+<Service Name="wlidsvc" StartupType="Manual" State="Stopped" Uptime="" />
+<Service Name="swprv" StartupType="Manual" State="Stopped" Uptime="" />
+<Service Name="RpcLocator" StartupType="Manual" State="Stopped" Uptime="" />
+<Service Name="RpcEptMapper" StartupType="Automatic" State="Running" Uptime="" />
+<Service Name="Schedule" StartupType="Automatic" State="Running" Uptime="" />
+<Service Name="UsoSvc" StartupType="Automatic" State="Running" Uptime="7" />
+<Service Name="VSS" StartupType="Manual" State="Stopped" Uptime="" />
+<Service Name="LicenseManager" StartupType="Manual" State="Running" Uptime="" />
+<Service Name="WManSvc" StartupType="Manual" State="Stopped" Uptime="" />
+<Service Name="SDRSVC" StartupType="Manual" State="Stopped" Uptime="" />
+<Service Name="mpssvc" StartupType="Automatic" State="Running" Uptime="" />
+<Service Name="TrustedInstaller" StartupType="Manual" State="Stopped" Uptime="" />
+<Service Name="WpnService" StartupType="Automatic" State="Running" Uptime="7" />
+<Service Name="SecurityHealthService" StartupType="Manual" State="Running" Uptime="" />
+<Service Name="McAfeeFramework" StartupType="Manual" State="Running" Uptime="" />
+<Service Name="macmnsvc" StartupType="Automatic" State="Running" Uptime="" />
+<Service Name="masvc" StartupType="Automatic" State="Running" Uptime="" />
+<Service Name="TrellixDLPAgentService" StartupType="Automatic" State="Running" Uptime="" />
+<Service Name="MfeFfCoreService" StartupType="Automatic" State="Running" Uptime="" />
+<Service Name="Trellix Management of Native Encryption Service" StartupType="Automatic" State="Running" Uptime="7" />
+<Remediation Name="AdminShare" Fix="True" />
+<Remediation Name="ClientProvisioningMode" Fix="True" />
+<Remediation Name="ClientStateMessages" Fix="True" />
+<Remediation Name="ClientWUAHandler" Fix="True" Days="" />
+<Remediation Name="ClientCertificate" Fix="True" />
+</Configuration>

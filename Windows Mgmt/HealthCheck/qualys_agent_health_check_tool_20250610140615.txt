@@ -1,0 +1,132 @@
+************************************************************************************************
+Performing Health Checks
+************************************************************************************************
+CoreHealthCheck 1 : Verifying if the Qualys agent is installed on your system.
+CoreHealthCheck 2 : Retrieving information about qualys services currently running on your system.
+CoreHealthCheck 3 : Retrieving information about qualys processes currently running on your system.
+CoreHealthCheck 4 : Retrieving certificate information
+CoreHealthCheck 5 : Retrieving proxy details
+CoreHealthCheck 6 : Assessing connectivity to the backend system.
+CoreHealthCheck 7 : Retrieving information about Agent communication.
+CoreHealthCheck 8 : Gathering details about Qualys modules installed on the system.
+CoreHealthCheck 9 : Assessing patch connectivity.
+
+Evaluating overall health of the system.
+
+************************************************************************************************
+Qualys Agent Local Health Check Tool Report : 
+************************************************************************************************
+
+Overall Health : Good
+
+Services : 
+
+	Name : qualysagent
+	State : Running
+
+Certificates : 
+
+	Name : DigiCert Global Root CA
+	Installed : true
+
+
+	Name : DigiCert Trusted Root G4
+	Installed : true
+
+
+	Name : DigiCert Assured ID Root CA
+	Installed : true
+
+
+	Name : DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1
+	Installed : true
+
+
+	Name : Qualys Ops Root
+	Installed : false
+
+
+	Name : Qualys Ops T2v1
+	Installed : false
+
+Handshake Prerequisite Details : 
+
+	Url : https://qagpublic.qg2.apps.qualys.com/CloudAgent/
+	Server Certificate Chain Verified : true
+	TLS Status: 
+		Possible TLS Used By Agent : TLS1.2
+		TLS 1.3 Status: 
+			Enabled locally : true
+			Supported By Server : false
+		TLS 1.2 Status: 
+			Enabled locally : true
+			Supported By Server : true
+		TLS 1.1 Status: 
+			Enabled locally : true
+			Supported By Server : false
+		TLS 1.0 Status: 
+			Enabled locally : true
+			Supported By Server : false
+	Cipher Details : The tool cannot gather cipher information.
+
+Agent Communication Details : 
+
+	Last CAPI : 2025-06-10 17:36:05.542
+	CAPI Interval : 2700
+
+Backend Connectivity : 
+
+	Direct Connection : 
+		URL : https://qagpublic.qg2.apps.qualys.com/status
+		Connection Succeeded : true
+
+Modules : 
+
+	Name : Vulnerability
+	Module Type : Scan based
+	State : Ready for Scan
+	Enabled : true
+	Last Scan Time : 2025-06-10 17:08:47.051
+	Scan Interval : 14400
+	Next Scan Time : 2025-06-10 22:08:47
+	VM Scan Deadline : 2025-06-12 22:08:47
+	Module Health : Vulnerability Health Good
+
+	Name : PolicyCompliance
+	Module Type : Scan based
+	Enabled : false
+
+	Name : SCA
+	Module Type : Scan based
+	State : Ready for Scan
+	Enabled : true
+	Last Scan Time : 2025-06-10 10:47:36.815
+	Scan Interval : 129600
+	Next Scan Time : 2025-06-11 23:47:36
+	SCA Scan Deadline : 2025-06-13 23:47:36
+	Module Health : SCA Health Good
+
+	Name : Patch Management
+	Module Type : Realtime
+	Enabled : true
+	Patch Connectivity : 
+		Direct Connection : 
+			URL : https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.5/npp.8.5.Installer.x64.exe
+			Connection Succeeded : true
+	Module Health : Patch Management Health Good
+	Patch Certificates : 
+
+	Name : DigiCert Trusted Root G4
+	Installed : true
+
+
+	Name : DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1
+	Installed : true
+
+
+	Name : VeriSign Class 3 Public Primary Certification Authority - G5
+	Installed : true
+
+
+Detailed Report Location : C:\Users\179944\OneDrive - CHOA\scripts\Repository\Windows Mgmt\HealthCheck\qualys_agent_health_check_tool_20250610140615.json
+Concise Text Report Location : C:\Users\179944\OneDrive - CHOA\scripts\Repository\Windows Mgmt\HealthCheck\qualys_agent_health_check_tool_20250610140615.txt
