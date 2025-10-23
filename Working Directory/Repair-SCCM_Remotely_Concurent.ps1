@@ -1,6 +1,6 @@
-﻿# Define file paths and list of computers
+# Define file paths and list of computers
 $computersListPath = "C:\CHOA\ComputersList.txt"
-$filesToCopy = "\\CHOA-CIFS\install\CM_P01\06_InProduction\SoftwareDistribution\Microsoft\MECMClient.zip"
+$filesToCopy = "\\CIFS\install\P01\06_InProduction\SoftwareDistribution\Microsoft\MECMClient.zip"
 $destinationPath = "C$\CHOA"
 $logFilePath = "C:\CHOA\SCCMFix_Conc_$(get-date -Format MMddyyyy).log"
 $unzipTestPath = "C$\CHOA\MECMClient\ccmsetup.exe"
@@ -10,7 +10,7 @@ $timeOutMinutes = 20
 # SCCM client install and uninstall commands
 $uninstallPath = "C:\Windows\ccmsetup\ccmsetup.exe"
 $installPath = "C:\CHOA\MECMClient\ccmsetup.exe"
-$installParams = "SMSSITECODE=P01 SMSCACHESIZE=20480 SMSMP=DCVWP-SCCMAP01.choa.org FSP=DCVWP-SCCMAP01.choa.org CCMHTTPPORT=8080 CCMHTTPSPORT=443 RESETKEYINFORMATION=TRUE"
+$installParams = "SMSSITECODE=P01 SMSCACHESIZE=20480 SMSMP=<server name> FSP=<server name> CCMHTTPPORT=8080 CCMHTTPSPORT=443 RESETKEYINFORMATION=TRUE"
 $unzipCommand = 'Expand-Archive -Path "C:\CHOA\MECMClient.zip" -DestinationPath "C:\CHOA\" -Force'
 
 # Initialize log file
